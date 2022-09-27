@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    android:id="@+id/maindrawer"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:openDrawer="start"
+    >
+
+
+
+
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#020202"
+        android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#020202"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="4dp"
+        android:textAlignment="center"
+        android:id="@+id/toptoolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_gravity="center_horizontal" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragcontainer"
+        />
+
+
+
+
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/notesRecycler"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+</androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/addcircle"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="auto"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="true" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp">
+
+            <com.google.android.gms.ads.AdView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/homescreenAd"
+                ads:adSize = "BANNER"
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navView"
+        android:layout_gravity = "start"
+        android:background="#850E98"
+        app:itemIconTint="#ffffff"
+        app:itemTextColor="#ffffff"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/menu_options"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

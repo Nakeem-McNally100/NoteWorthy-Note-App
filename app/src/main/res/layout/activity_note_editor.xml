@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#020202"
+    tools:context=".NoteEditor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#020202"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:layout_marginBottom="10dp"
+            >
+
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backbtn"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerCrop">
+        </ImageView>
+
+
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="330dp"
+            android:layout_height="48dp"
+            android:textColorHint="#FFFFFF"
+            android:hint="Title"
+            android:maxLength="40"
+            android:background="@null"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            />
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/optionbtn"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop">
+        </ImageView>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:background="@null"
+        android:hint="Type here"
+        android:maxLength="600"
+        android:inputType="textMultiLine"
+        android:isScrollContainer="true"
+        android:textSize="18dp"
+        />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="60dp">
+
+        <com.google.android.gms.ads.AdView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/editorscreenAd"
+            ads:adSize = "BANNER"
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+            />
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
